@@ -1,0 +1,234 @@
+{
+  "experiments": [
+    {
+      "name": "rtdetrv2_r50_640_prior001",
+      "architecture": "RT-DETRv2-R50",
+      "checkpoint": "/root/autodl-tmp/surgical/artifacts/runs/formal/best",
+      "config": "/root/autodl-tmp/surgical/config/project.yaml",
+      "metrics": {
+        "train": {
+          "map": 0.8337733149528503,
+          "map_50": 1.0,
+          "map_75": 0.9817439913749695,
+          "map_small": -1.0,
+          "map_medium": 0.682145357131958,
+          "map_large": 0.8353012800216675,
+          "mar_1": 0.8642170429229736,
+          "mar_10": 0.8714285492897034,
+          "mar_100": 0.8739697933197021,
+          "mar_small": -1.0,
+          "mar_medium": 0.7400000095367432,
+          "mar_large": 0.8748962879180908,
+          "map_per_class": -1.0,
+          "mar_100_per_class": -1.0,
+          "classes": 0.0,
+          "loss": 3.8150403709202023
+        },
+        "val": {
+          "map": 0.27306804060935974,
+          "map_50": 0.6095817685127258,
+          "map_75": 0.1965893656015396,
+          "map_small": -1.0,
+          "map_medium": 0.08196716010570526,
+          "map_large": 0.27772295475006104,
+          "mar_1": 0.3113177418708801,
+          "mar_10": 0.4337407052516937,
+          "mar_100": 0.49686503410339355,
+          "mar_small": -1.0,
+          "mar_medium": 0.2083333283662796,
+          "mar_large": 0.4987165629863739,
+          "map_per_class": -1.0,
+          "mar_100_per_class": -1.0,
+          "classes": 0.0,
+          "loss": 13.026734859256422
+        },
+        "test": {
+          "map": 0.09402239322662354,
+          "map_50": 0.3118685483932495,
+          "map_75": 0.03335218131542206,
+          "map_small": -1.0,
+          "map_medium": -1.0,
+          "map_large": 0.09796003997325897,
+          "mar_1": 0.17786407470703125,
+          "mar_10": 0.36446601152420044,
+          "mar_100": 0.4438835084438324,
+          "mar_small": -1.0,
+          "mar_medium": -1.0,
+          "mar_large": 0.4438835084438324,
+          "map_per_class": -1.0,
+          "mar_100_per_class": -1.0,
+          "classes": 0.0,
+          "loss": 15.003240790733924
+        }
+      },
+      "notes": "B train, C val, D test; classifier prior 0.01; 19 epochs early stop",
+      "registered_at": "2026-08-09T07:28:28.533307+00:00"
+    },
+    {
+      "name": "dfine_m_640",
+      "architecture": "D-FINE-M",
+      "checkpoint": "/root/autodl-tmp/surgical/artifacts/experiments/dfine_m_640/best_stg1.pth",
+      "config": "/root/autodl-tmp/surgical/config/dfine_m_surgical.yml",
+      "metrics": {
+        "train": {
+          "map": 0.824,
+          "map_50": 1.0,
+          "map_75": 0.979,
+          "map_small": -1.0,
+          "map_medium": 0.62,
+          "map_large": 0.825,
+          "mar_1": 0.85,
+          "mar_10": 0.873,
+          "mar_100": 0.893,
+          "mar_small": -1.0,
+          "mar_medium": 0.84,
+          "mar_large": 0.893
+        },
+        "val": {
+          "map": 0.3202889527670752,
+          "map_50": 0.7181862593809059,
+          "map_75": 0.23942995514910628,
+          "map_small": -1.0,
+          "map_medium": 0.020085984061341954,
+          "map_large": 0.3243595193837873,
+          "mar_1": 0.3493623804463337,
+          "mar_10": 0.48846971307120074,
+          "mar_100": 0.601009564293305,
+          "mar_small": -1.0,
+          "mar_medium": 0.13333333333333333,
+          "mar_large": 0.6040106951871658,
+          "epoch": 20,
+          "selection_split": "val",
+          "selection_metric": "map"
+        },
+        "test": {
+          "map": 0.16,
+          "map_50": 0.509,
+          "map_75": 0.046,
+          "map_small": -1.0,
+          "map_medium": -1.0,
+          "map_large": 0.164,
+          "mar_1": 0.234,
+          "mar_10": 0.417,
+          "mar_100": 0.552,
+          "mar_small": -1.0,
+          "mar_medium": -1.0,
+          "mar_large": 0.552
+        }
+      },
+      "notes": "B train C val D test; 30 epochs; best epoch 20; temporal and learned reranking evaluated separately",
+      "registered_at": "2026-08-09T09:16:26.532189+00:00"
+    },
+    {
+      "name": "dfine_m_800",
+      "architecture": "D-FINE-M",
+      "checkpoint": "/root/autodl-tmp/surgical/artifacts/experiments/dfine_m_800/best_stg1.pth",
+      "config": "/root/autodl-tmp/surgical/config/dfine_m_surgical_800.yml",
+      "metrics": {
+        "val": {
+          "map": 0.28036723789111573,
+          "map_50": 0.6575890637361557,
+          "map_75": 0.20414587025953368,
+          "map_small": -1.0,
+          "map_medium": 0.011703344418089795,
+          "map_large": 0.28357467618777354,
+          "mar_1": 0.31673751328374067,
+          "mar_10": 0.44537725823591917,
+          "mar_100": 0.547077577045696,
+          "mar_small": -1.0,
+          "mar_medium": 0.10833333333333332,
+          "mar_large": 0.5498930481283424,
+          "epoch": 1,
+          "selection_split": "val",
+          "selection_metric": "map"
+        }
+      },
+      "notes": "800px scale ablation; 14 complete epochs; did not improve C",
+      "registered_at": "2026-08-09T09:16:37.758719+00:00"
+    },
+    {
+      "name": "dfine_m_640_refine",
+      "architecture": "D-FINE-M",
+      "checkpoint": "/root/autodl-tmp/surgical/artifacts/experiments/dfine_m_640_refine/best_stg1.pth",
+      "config": "/root/autodl-tmp/surgical/config/dfine_m_surgical_refine.yml",
+      "metrics": {
+        "val": {
+          "map": 0.2877522517280944,
+          "map_50": 0.6512873912922774,
+          "map_75": 0.2121549248983958,
+          "map_small": -1.0,
+          "map_medium": 0.002442899561067929,
+          "map_large": 0.29299961288796983,
+          "mar_1": 0.3250265674814028,
+          "mar_10": 0.4523910733262487,
+          "mar_100": 0.5709351753453772,
+          "mar_small": -1.0,
+          "mar_medium": 0.15,
+          "mar_large": 0.5736363636363636,
+          "epoch": 1,
+          "selection_split": "val",
+          "selection_metric": "map"
+        }
+      },
+      "notes": "640 low-LR no-crop/no-zoom refine; 8 complete epochs; did not improve C",
+      "registered_at": "2026-08-09T09:16:37.919480+00:00"
+    },
+    {
+      "name": "dfine_m_640_multicase",
+      "architecture": "D-FINE-M",
+      "checkpoint": "/root/autodl-tmp/surgical/artifacts/experiments/dfine_m_640_multicase/best_stg1.pth",
+      "config": "/root/autodl-tmp/surgical/config/dfine_m_surgical_multicase.yml",
+      "metrics": {
+        "val": {
+          "map": 0.3282392705775268,
+          "map_50": 0.8210605996619236,
+          "map_75": 0.18739734566705493,
+          "map_small": -1.0,
+          "map_medium": 0.061190227429173634,
+          "map_large": 0.33084864929460933,
+          "mar_1": 0.4148777895855472,
+          "mar_10": 0.4845377258235919,
+          "mar_100": 0.553028692879915,
+          "mar_small": -1.0,
+          "mar_medium": 0.25833333333333336,
+          "mar_large": 0.5549197860962567,
+          "epoch": 25,
+          "selection_split": "val",
+          "selection_metric": "map"
+        },
+        "test": {
+          "map": 0.1908154903573929,
+          "map_50": 0.5526632939400049,
+          "map_75": 0.1089657365486531,
+          "map_small": -1.0,
+          "map_medium": -1.0,
+          "map_large": 0.19263773342080598,
+          "mar_1": 0.2966990291262136,
+          "mar_10": 0.41281553398058257,
+          "mar_100": 0.5019417475728155,
+          "mar_small": -1.0,
+          "mar_medium": -1.0,
+          "mar_large": 0.5019417475728155,
+          "f1": 0.6819047619047619,
+          "precision": 0.6691588785046729,
+          "recall": 0.6951456310679611,
+          "tp": 358,
+          "fp": 177,
+          "fn": 157,
+          "selection_split": "test_fixed_once"
+        }
+      },
+      "notes": "VID001_B + CH2001_CH001 train; C val; D fixed test; 30 epochs; best epoch 25; excluded frames without label files",
+      "registered_at": "2026-08-10T04:37:47.845691+00:00"
+    }
+  ],
+  "best_by_validation_map": {
+    "name": "dfine_m_640_multicase",
+    "architecture": "D-FINE-M",
+    "checkpoint": "/root/autodl-tmp/surgical/artifacts/experiments/dfine_m_640_multicase/best_stg1.pth",
+    "config": "/root/autodl-tmp/surgical/config/dfine_m_surgical_multicase.yml",
+    "val_map": 0.3282392705775268,
+    "val_map_50": 0.8210605996619236,
+    "val_map_75": 0.18739734566705493
+  }
+}

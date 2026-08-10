@@ -1,0 +1,59 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments and local settings
+.env
+.env.*
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+
+# Raw/private surgical data and source presentation
+data/
+*.pptx
+
+# Model weights and generated media
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.html
+events.out.tfevents.*
+
+# Generated artifacts are excluded by default. Keep only lightweight,
+# non-image reproducibility summaries that are explicitly unignored below.
+artifacts/*
+!artifacts/audit/
+artifacts/audit/*
+!artifacts/audit/dataset_audit.json
+!artifacts/audit/CH2001CH001_label_audit.json
+!artifacts/evaluation/
+artifacts/evaluation/*
+!artifacts/evaluation/*.json
+!artifacts/experiments/
+artifacts/experiments/*
+!artifacts/experiments/best_model.json
+!artifacts/experiments/registry.json
+!artifacts/experiments/dfine_m_640_multicase/
+artifacts/experiments/dfine_m_640_multicase/*
+!artifacts/experiments/dfine_m_640_multicase/metrics/
+artifacts/experiments/dfine_m_640_multicase/metrics/*
+!artifacts/experiments/dfine_m_640_multicase/metrics/*.json
+!artifacts/reports/
+artifacts/reports/*
+!artifacts/reports/*.md
+

@@ -1,0 +1,58 @@
+project_root: ..
+data_dir: data
+artifacts_dir: artifacts
+video_dir: data/video
+label_dir: data/label
+identity_overrides:
+  # The source uses different names for the video and its label directory.
+  # Map both to one stable case/segment identity for auditing and splitting.
+  videos:
+    Ch2_001_CH001_V_5fps.mp4: [CH2001, CH2001_CH001]
+  labels:
+    CH2001CH001: [CH2001, CH2001_CH001]
+class_names:
+  0: Harmonic0
+frame_index_base: 0
+seed: 42
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+  minimum_cases: 3
+  segment_holdout:
+    train: [VID001_B, CH2001_CH001]
+    val: [VID001_C]
+    test: [VID001_D]
+model:
+  checkpoint: PekingU/rtdetr_v2_r50vd
+  image_size: 640
+  epochs: 50
+  early_stopping_patience: 10
+  batch_size: 4
+  gradient_accumulation: 2
+  learning_rate: 0.0001
+  backbone_learning_rate: 0.00001
+  weight_decay: 0.0001
+  gradient_clip: 0.1
+  confidence_threshold: 0.53
+  num_workers: 4
+  classifier_prior_probability: 0.01
+  augmentation:
+    horizontal_flip_probability: 0.5
+    color_jitter: 0.2
+tracking:
+  iou_threshold: 0.25
+  maximum_age_frames: 15
+  maximum_detections_per_frame: 20
+inference:
+  batch_size: 8
+evaluation:
+  batch_size: 8
+metrics:
+  target_class: Harmonic0
+  confidence_threshold: 0.53
+  center_radius: 0.20
+  maximum_interpolation_gap_seconds: 0.6
+  smoothing_window_seconds: 0.6
+ratings:
+  bootstrap_iterations: 2000

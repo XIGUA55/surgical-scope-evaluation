@@ -1,0 +1,9 @@
+{
+  "name": "dfine_m_640_multicase",
+  "architecture": "D-FINE-M",
+  "checkpoint": "/root/autodl-tmp/surgical/artifacts/experiments/dfine_m_640_multicase/best_stg1.pth",
+  "config": "/root/autodl-tmp/surgical/config/dfine_m_surgical_multicase.yml",
+  "val_map": 0.3282392705775268,
+  "val_map_50": 0.8210605996619236,
+  "val_map_75": 0.18739734566705493
+}

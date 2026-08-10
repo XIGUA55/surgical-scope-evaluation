@@ -1,0 +1,7 @@
+# All spatial quantities are normalized by frame width/height before calculation.
+target_class: Harmonic0
+confidence_threshold: 0.25
+center_radius: 0.20
+max_interpolation_gap_seconds: 0.6
+smoothing_window_seconds: 0.6
+

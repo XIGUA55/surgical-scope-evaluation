@@ -1,0 +1,142 @@
+{
+  "videos": [
+    {
+      "path": "/root/autodl-tmp/surgical/data/video/Ch2_001_CH001_V_5fps.mp4",
+      "case_id": "CH2001",
+      "segment_id": "CH2001_CH001",
+      "readable": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 5.0,
+      "frame_count": 4500,
+      "duration_s": 900.0,
+      "file_size": 2123651078,
+      "truncated_atom": null,
+      "declared_atom_end": null,
+      "error": null
+    },
+    {
+      "path": "/root/autodl-tmp/surgical/data/video/VID001.mp4",
+      "case_id": "VID001",
+      "segment_id": "VID001",
+      "readable": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "frame_count": 15003,
+      "duration_s": 600.189388,
+      "file_size": 1267879712,
+      "truncated_atom": null,
+      "declared_atom_end": null,
+      "error": null
+    },
+    {
+      "path": "/root/autodl-tmp/surgical/data/video/VID001_B_5fps.mp4",
+      "case_id": "VID001",
+      "segment_id": "VID001_B",
+      "readable": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 5.0,
+      "frame_count": 3000,
+      "duration_s": 600.0,
+      "file_size": 808459108,
+      "truncated_atom": null,
+      "declared_atom_end": null,
+      "error": null
+    },
+    {
+      "path": "/root/autodl-tmp/surgical/data/video/VID001_C_5fps.mp4",
+      "case_id": "VID001",
+      "segment_id": "VID001_C",
+      "readable": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 5.0,
+      "frame_count": 3000,
+      "duration_s": 600.0,
+      "file_size": 777178912,
+      "truncated_atom": null,
+      "declared_atom_end": null,
+      "error": null
+    },
+    {
+      "path": "/root/autodl-tmp/surgical/data/video/VID001_D_5fps.mp4",
+      "case_id": "VID001",
+      "segment_id": "VID001_D",
+      "readable": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 5.0,
+      "frame_count": 3001,
+      "duration_s": 600.2,
+      "file_size": 738938590,
+      "truncated_atom": null,
+      "declared_atom_end": null,
+      "error": null
+    }
+  ],
+  "label_sets": [
+    {
+      "path": "/root/autodl-tmp/surgical/data/label/CH2001CH001",
+      "case_id": "CH2001",
+      "segment_id": "CH2001_CH001",
+      "label_files": 1959,
+      "annotation_rows": 1959,
+      "minimum_frame": 0,
+      "maximum_frame": 3120,
+      "object_ids": {
+        "0": 1959
+      },
+      "status": "ready"
+    },
+    {
+      "path": "/root/autodl-tmp/surgical/data/label/VID001_Bseg",
+      "case_id": "VID001",
+      "segment_id": "VID001_B",
+      "label_files": 1456,
+      "annotation_rows": 1456,
+      "minimum_frame": 1120,
+      "maximum_frame": 2907,
+      "object_ids": {
+        "0": 1456
+      },
+      "status": "ready"
+    },
+    {
+      "path": "/root/autodl-tmp/surgical/data/label/VID001_Cseg",
+      "case_id": "VID001",
+      "segment_id": "VID001_C",
+      "label_files": 1882,
+      "annotation_rows": 1882,
+      "minimum_frame": 65,
+      "maximum_frame": 2920,
+      "object_ids": {
+        "0": 1871,
+        "1": 11
+      },
+      "status": "ready"
+    },
+    {
+      "path": "/root/autodl-tmp/surgical/data/label/VID001_Dseg",
+      "case_id": "VID001",
+      "segment_id": "VID001_D",
+      "label_files": 515,
+      "annotation_rows": 515,
+      "minimum_frame": 40,
+      "maximum_frame": 2538,
+      "object_ids": {
+        "0": 515
+      },
+      "status": "ready"
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "video_count": 5,
+    "readable_video_count": 5,
+    "label_file_count": 5812,
+    "ready_label_file_count": 5812,
+    "error_count": 0
+  }
+}

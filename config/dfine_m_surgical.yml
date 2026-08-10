@@ -1,0 +1,56 @@
+__include__:
+  - /root/autodl-tmp/surgical/third_party/D-FINE/configs/dfine/custom/dfine_hgnetv2_m_custom.yml
+
+output_dir: /root/autodl-tmp/surgical/artifacts/experiments/dfine_m_640
+num_classes: 1
+remap_mscoco_category: False
+sync_bn: False
+epochs: 30
+checkpoint_freq: 1
+print_freq: 50
+use_amp: True
+use_ema: True
+
+train_dataloader:
+  dataset:
+    img_folder: /root/autodl-tmp/surgical/artifacts/dataset
+    ann_file: /root/autodl-tmp/surgical/artifacts/dataset/annotations_train.json
+    transforms:
+      policy:
+        epoch: 24
+  total_batch_size: 8
+  num_workers: 4
+  collate_fn:
+    stop_epoch: 24
+    ema_restart_decay: 0.9999
+    base_size_repeat: 3
+
+val_dataloader:
+  dataset:
+    img_folder: /root/autodl-tmp/surgical/artifacts/dataset
+    ann_file: /root/autodl-tmp/surgical/artifacts/dataset/annotations_val.json
+  total_batch_size: 8
+  num_workers: 4
+
+optimizer:
+  type: AdamW
+  params:
+    - params: '^(?=.*backbone)(?!.*norm|bn).*$'
+      lr: 0.00001
+    - params: '^(?=.*backbone)(?=.*norm|bn).*$'
+      lr: 0.00001
+      weight_decay: 0.0
+    - params: '^(?=.*(?:encoder|decoder))(?=.*(?:norm|bn|bias)).*$'
+      weight_decay: 0.0
+  lr: 0.0001
+  betas: [0.9, 0.999]
+  weight_decay: 0.000125
+
+lr_scheduler:
+  type: MultiStepLR
+  milestones: [24]
+  gamma: 0.1
+
+lr_warmup_scheduler:
+  type: LinearWarmup
+  warmup_duration: 500

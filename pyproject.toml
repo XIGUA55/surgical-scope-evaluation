@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scope-eval"
+version = "0.1.0"
+description = "Transformer instrument detection and laparoscopic camera quality evaluation"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "opencv-python>=4.10,<6",
+  "Pillow>=10,<13",
+  "PyYAML>=6,<7",
+  "torch==2.8.0",
+  "torchvision==0.23.0",
+  "transformers>=4.49,<5",
+  "accelerate>=1.2,<2",
+  "pycocotools>=2.0.8,<3",
+  "torchmetrics>=1.6,<2",
+  "scipy>=1.13,<2",
+  "scikit-learn>=1.5,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+dfine = [
+  "faster-coco-eval>=1.7,<2",
+  "tensorboard>=2.20,<3",
+  "calflops>=0.3,<1",
+  "loguru>=0.7,<1",
+]
+
+[project.scripts]
+scope-eval = "scope_eval.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scope_eval*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

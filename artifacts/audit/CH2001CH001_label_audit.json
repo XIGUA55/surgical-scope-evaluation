@@ -1,0 +1,45 @@
+{
+  "archive": "/root/autodl-tmp/surgical/data/CH2001CH001.zip",
+  "extracted_to": "/root/autodl-tmp/surgical/data/label/CH2001CH001",
+  "archive_crc_ok": true,
+  "unsafe_archive_paths": 0,
+  "archive_preserved": true,
+  "video": "/root/autodl-tmp/surgical/data/video/Ch2_001_CH001_V_5fps.mp4",
+  "video_frames": 4500,
+  "label_files": 1959,
+  "annotation_rows": 1959,
+  "rows_per_file": 1,
+  "frame_min": 0,
+  "frame_max": 3120,
+  "label_file_coverage_of_video": 0.43533333333333335,
+  "missing_files_within_0_3120": 1162,
+  "unlabeled_tail": {
+    "first_frame": 3121,
+    "last_frame": 4499,
+    "frames": 1379,
+    "duration_seconds": 275.8
+  },
+  "format": "class_id,object_id,cx,cy,width,height",
+  "field_count": 6,
+  "classes": {"0": 1959},
+  "object_ids": {"0": 1959},
+  "non_finite_or_invalid_normalized_values": 0,
+  "strict_boundary_overflow_files": [364, 704, 1191, 2479, 3087, 3088],
+  "accepted_by_current_parser": 1958,
+  "rejected_by_current_parser": {
+    "frame": 1191,
+    "reason": "box top extends beyond image by about 4.35%, exceeding the current 2% tolerance"
+  },
+  "visual_correspondence_check": {
+    "status": "passed",
+    "sampled_frames": [0, 364, 704, 1191, 2479, 3120],
+    "contact_sheet": "/root/autodl-tmp/surgical/artifacts/audit/CH2001CH001_label_contact_sheet.jpg"
+  },
+  "automatic_ingestion_status": "not_ready",
+  "automatic_ingestion_blockers": [
+    "Video and label names do not follow the current VIDxxx_segment naming convention",
+    "The audit discovers only label directories ending in seg, so CH2001CH001 is currently ignored",
+    "Frame 1191 is rejected by the current boundary tolerance",
+    "Unlabeled frames require confirmation that missing files mean target absence rather than incomplete export"
+  ]
+}
